@@ -13,6 +13,8 @@ dependencies:
   flutter_sound: ^9.28.0
   flutter_webrtc: ^0.14.0
   http: ^1.4.0
+  just_audio: ^0.10.3
+  just_audio_web: ^0.4.16
   permission_handler: ^12.0.0+1
   web_socket_channel: ^3.0.3
 

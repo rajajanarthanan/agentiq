@@ -81,6 +81,9 @@ class WebRTCClient {
 
   MediaStream? get localStream => _localStream;
   MediaStream? get remoteStream => _remoteStream;
+  bool get isDisconnected =>
+      _peerConnection?.connectionState ==
+      RTCPeerConnectionState.RTCPeerConnectionStateDisconnected;
 }
 
 // RTCVideoRenderer createRenderer() {
