@@ -12,8 +12,15 @@ class WebRTCClient {
   MediaStream? _remoteStream;
   String? token;
   Map<String, dynamic> data;
-  WebRTCClient({required this.signalingUrl, this.token, this.data = const {}});
+  final Future<void> Function() onDisconnected;
+  WebRTCClient({
+    required this.signalingUrl,
+    this.token,
+    this.data = const {},
+    this.onDisconnected = _defaultOnDisconnected,
+  });
 
+  static Future<void> _defaultOnDisconnected() async {}
   Future<void> connect() async {
     // 1. Create peer connection
     final config = {
@@ -42,6 +49,14 @@ class WebRTCClient {
         renderer.srcObject = _remoteStream;
         renderer.initialize();
         print("Remote stream received");
+      }
+    };
+
+    //// register callback on peer disconnected
+    _peerConnection!.onConnectionState = (state) async {
+      if (state == RTCPeerConnectionState.RTCPeerConnectionStateDisconnected) {
+        print("Peer connection disconnected");
+        await onDisconnected();
       }
     };
 
@@ -84,6 +99,8 @@ class WebRTCClient {
   bool get isDisconnected =>
       _peerConnection?.connectionState ==
       RTCPeerConnectionState.RTCPeerConnectionStateDisconnected;
+
+  RTCPeerConnection? get peerConnection => _peerConnection;
 }
 
 // RTCVideoRenderer createRenderer() {
