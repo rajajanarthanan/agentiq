@@ -30,3 +30,7 @@ class ViewContentBuilder extends StatelessWidget {
     return Container(child: body);
   }
 }
+
+abstract class AgentiqView extends StatelessWidget {
+  const AgentiqView({super.key});
+}

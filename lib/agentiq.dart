@@ -7,3 +7,6 @@ export 'audios.dart';
 export 'file_system/file_system.dart';
 export 'audio_player/audio_player.dart';
 export 'country_codes.dart';
+export 'entities/user.dart';
+export 'resources.dart';
+export 'services/auth_service.dart';

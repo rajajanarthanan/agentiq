@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
+
+final logger = Logger();
 
 double widgetPadding(BuildContext context, {double paddingPercent = 1}) =>
     MediaQuery.of(context).size.width * paddingPercent * 0.01;
