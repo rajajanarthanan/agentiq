@@ -8,9 +8,11 @@ class AgentiqUser extends Equatable {
   final String email;
   final String? phoneNumber;
   final String? profilePictureUrl;
+  final UserRole role;
 
   const AgentiqUser({
     required this.id,
+    required this.role,
     required this.name,
     required this.email,
     this.phoneNumber,
@@ -18,15 +20,23 @@ class AgentiqUser extends Equatable {
   });
 
   @override
-  List<Object?> get props => [id, name, email, phoneNumber, profilePictureUrl];
+  List<Object?> get props => [
+    id,
+    role,
+    name,
+    email,
+    phoneNumber,
+    profilePictureUrl,
+  ];
 
   @override
   String toString() {
-    return "AgentiqUser(id: $id, name: $name, email: $email, phoneNumber: $phoneNumber, profilePictureUrl: $profilePictureUrl)";
+    return "AgentiqUser(id: $id, role: $role, name: $name, email: $email, phoneNumber: $phoneNumber, profilePictureUrl: $profilePictureUrl)";
   }
 
   AgentiqUser copyWith({
     String? id,
+    UserRole? role,
     String? name,
     String? email,
     String? phoneNumber,
@@ -34,6 +44,7 @@ class AgentiqUser extends Equatable {
   }) {
     return AgentiqUser(
       id: id ?? this.id,
+      role: role ?? this.role,
       name: name ?? this.name,
       email: email ?? this.email,
       phoneNumber: phoneNumber ?? this.phoneNumber,

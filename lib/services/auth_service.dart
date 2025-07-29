@@ -125,6 +125,7 @@ class FirebaseAuthService implements AgentiqAuthService {
     if (user != null) {
       return AgentiqUser(
         id: user.uid,
+        role: UserRole.user,
         name: user.displayName ?? '',
         email: user.email ?? '',
         phoneNumber: user.phoneNumber ?? '',
@@ -140,6 +141,7 @@ class FirebaseAuthService implements AgentiqAuthService {
       if (user != null) {
         return AgentiqUser(
           id: user.uid,
+          role: UserRole.user,
           name: user.displayName ?? '',
           email: user.email ?? '',
           phoneNumber: user.phoneNumber ?? '',
