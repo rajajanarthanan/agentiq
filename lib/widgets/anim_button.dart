@@ -1,4 +1,4 @@
-import 'package:agentiq/colorscheme.dart';
+import 'package:agentiq/resources/colorscheme.dart';
 import 'package:agentiq/widgets/animated_border_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -29,7 +29,7 @@ class AnimButton extends StatelessWidget {
         // const Color.fromARGB(255, 0, 90, 71),
         // const Color.fromARGB(255, 0, 255, 55),
       ],
-      duration: Duration(seconds: 4),
+      // duration: Duration(seconds: 4),
       child: ElevatedButton(
         onPressed: onPress,
         child:

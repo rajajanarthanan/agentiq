@@ -17,15 +17,18 @@ dependencies:
   flutter_sound: ^9.28.0
   flutter_webrtc: ^0.14.0
   freezed: ^3.1.0
+  get_it: ^8.2.0
   google_sign_in: ^7.1.0
   http: ^1.4.0
   injectable: ^2.5.0
+  injectable_generator: ^2.7.0
   just_audio: ^0.10.3
   just_audio_web: ^0.4.16
   logger: ^2.6.0
   permission_handler: ^12.0.0+1
+  rxdart: ^0.28.0
   web_socket_channel: ^3.0.3
-  zo_animated_border: ^1.0.0
+  zo_animated_border: ^1.0.1
 
 dev_dependencies:
   flutter_test:
@@ -40,7 +43,9 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/
     - assets/fonts/
+    - assets/logos/
 
   fonts:
     - family: PTSerif
