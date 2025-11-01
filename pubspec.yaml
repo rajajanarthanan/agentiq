@@ -1,0 +1,82 @@
+name: agentiq
+description: "A new Flutter package project."
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ^3.7.2
+  flutter: ">=1.17.0"
+
+dependencies:
+  dartz: ^0.10.1
+  equatable: ^2.0.7
+  firebase_auth: ^5.6.2
+  firebase_core: ^3.15.1
+  flutter:
+    sdk: flutter
+  # flutter_sound: ^9.28.0
+  # flutter_webrtc: ^0.14.0
+  freezed: ^3.1.0
+  google_sign_in: ^7.1.0
+  http: ^1.4.0
+  injectable: ^2.5.0
+  # just_audio: ^0.10.3
+  # just_audio_web: ^0.4.16
+  logger: ^2.6.0
+  path_provider: ^2.1.4
+  permission_handler: ^12.0.0+1
+  web_socket_channel: ^3.0.3
+  zo_animated_border: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+
+  fonts:
+    - family: PTSerif
+      fonts:
+        - asset: assets/fonts/PTSerif-Regular.ttf
+        - asset: assets/fonts/PTSerif-Italic.ttf
+          style: italic
+        - asset: assets/fonts/PTSerif-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/PTSerif-BoldItalic.ttf
+          weight: 700
+          style: italic
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter/static/Inter_18pt-Regular.ttf
+        - asset: assets/fonts/Inter/static/Inter_18pt-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Inter/static/Inter_18pt-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter/static/Inter_18pt-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Inter/static/Inter_18pt-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Inter/static/Inter_18pt-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/Inter/static/Inter_18pt-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter/static/Inter_18pt-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Inter/static/Inter_18pt-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter/static/Inter_18pt-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+ 
